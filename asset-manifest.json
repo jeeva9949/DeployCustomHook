@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/my-app/static/js/main.a53e60c2.js",
-    "index.html": "/my-app/index.html",
-    "main.a53e60c2.js.map": "/my-app/static/js/main.a53e60c2.js.map"
+    "main.js": "/DeployCustomHook/static/js/main.1b21439b.js",
+    "index.html": "/DeployCustomHook/index.html",
+    "main.1b21439b.js.map": "/DeployCustomHook/static/js/main.1b21439b.js.map"
   },
   "entrypoints": [
-    "static/js/main.a53e60c2.js"
+    "static/js/main.1b21439b.js"
   ]
 }

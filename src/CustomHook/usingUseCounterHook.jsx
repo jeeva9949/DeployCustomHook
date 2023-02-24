@@ -1,38 +1,30 @@
 import useFetch from "./useCountHook"
 
-const URL = "https://jsonplaceholder.typicode.com/users";
+const URL="https://jsonplaceholder.typicode.com/users";
+ 
 
 const Final = () =>{
-    const [usersdata,loading,error]=useFetch(URL);
 
+    const [data,loading,isError ]= useFetch(URL)
     if(loading){
-        return(
-            <h2>Loading....</h2>
-        )
+        return <h2>Loading...</h2>
+    }
+    if(isError){
+        return <h2>something went</h2>
     }
 
-    if(error.status){
-        return (
-            <h3>{error.mesg}</h3>
-        )
-    }
-
-    return(
-        <ul>
-            <h2>usersInformation</h2>
-            {
-                usersdata.map((eachobj)=>{
-                    const{id,username,email}=eachobj
-                    return(
-                        <li key = {id}>
-                            <h3>name:{username}</h3>
-                            <h3>email:{email}</h3>
-                        </li>
-                    )
-                })
-            }
-        </ul>
+    return  (
+        <div>
+            <ul>{data.map((eachobj)=>{
+                const {id,username} = eachobj
+                return(
+                    <li key = {id}>
+                            <p>username:{username}</p>
+                    </li>
+                )
+            })}</ul>
+        </div>
+        
     )
 }
-
-export default Final
+export default Final 
